@@ -5,6 +5,14 @@ from data import dataset
 
 
 def addUserDish(user_name, country, dish):
+    if user_name in dataset:
+        if country in user_name:
+            dataset[user_name][country].add(dish)
+        else:
+            dataset[user_name][country]={dish}           #={country:{dish}}
+    else:
+        dataset[user_name]={country:{dish}}
+
     #TODO
 
 
@@ -12,13 +20,13 @@ def addUserDish(user_name, country, dish):
 print("Task 1")
 
 #Додати нового користувача та страву у новій країні
-addUserDish(?,?,?)
+addUserDish("EK346743","USA","Water")
 
 #Додати існуючому користувачу нову країну з новою стравою
-addUserDish(?,?,?)
+addUserDish("PS334743","Ukraine","Water")
 
 #Додати існуючому користувачу нову страву в існуючого країну
-addUserDish(?,?,?)
+addUserDish("EK346743","Ukraine","Kovbasa")
 
 print(dataset)
 

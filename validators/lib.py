@@ -8,9 +8,10 @@ import re
 
 def getUserPassport():
 
-    user_input = input(?)
+    user_input = input("Input the number of your passport: ")
 
-    if (re.match(r"?", user_input) ):
+    if (re.match(r"^[A-B]{2}\d{6}&", user_input) ):
+        print(1)
         return user_input
     else:
         return False
@@ -22,6 +23,12 @@ def getUserPassport():
 """
 
 def getCountryName():
+    user_input = input("Input the name of country: ")
+
+    if (re.match(r"[A-B]{1}[a-b]{1-10}&", user_input)):
+        return user_input
+    else:
+        return False
     #TODO
 
 
@@ -33,4 +40,11 @@ def getCountryName():
 
 
 def getDishName():
+    user_input = input("Input the name of dish: ")
+
+    if (re.match(r"[A-B]{1}[a-b]{1-10}&", user_input)):
+        return user_input
+    else:
+        return False
     #TODO
+getUserPassport()

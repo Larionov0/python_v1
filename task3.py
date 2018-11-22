@@ -11,7 +11,10 @@ def recursionByCountry(?,...):
     #TODO
 
 
-def recursionByUsers(?,...):
+def recursionByUsers(dataset=dataset,number=0):
+    if dataset = []:
+        return 0
+    recursionBy
     #TODO
 
 
